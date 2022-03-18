@@ -7,7 +7,7 @@ import LoadingSpinner from "../../UI/Loading Spinner/LoadingSpinner";
 import ErrorMsg from "../../UI/Error/ErrorMsg";
 
 const HomeMovies = (props) => {
-  const { sendRequest, status, data, error } = useHttp(getTitles);
+  const { sendRequest, status, data } = useHttp(getTitles);
   const [isProblem, setIsProblem] = useState(false);
 
   let content;

@@ -8,11 +8,12 @@ import ErrorMsg from "../UI/Error/ErrorMsg";
 import FilterForm from "./FilterForm";
 
 const MovieList = (props) => {
-  const { sendRequest, status, data, error } = useHttp(getTitles);
+  const { sendRequest, status, data } = useHttp(getTitles);
   const [page, setPage] = useState(1);
   const [isProblem, setIsProblem] = useState(false);
   const [displayForm, setFormVisibility] = useState(false);
   const [defaultParams, setDefaultParams] = useState("&genre=Sci-Fi&year=2015");
+  const moviesPerPage = 10;
 
   let content;
 
@@ -29,13 +30,13 @@ const MovieList = (props) => {
   }
 
   useEffect(() => {
-    sendRequest({ page: page, limit: 10, params: defaultParams });
+    sendRequest({ page: page, limit: moviesPerPage, params: defaultParams });
   }, [page, defaultParams]);
 
   useEffect(() => {
     if (!isProblem) return;
 
-    sendRequest({ page: page, limit: 10, params: defaultParams });
+    sendRequest({ page: page, limit: moviesPerPage, params: defaultParams });
 
     setTimeout(() => {
       setIsProblem(false);
@@ -43,7 +44,7 @@ const MovieList = (props) => {
   }, [isProblem]);
 
   const nextPage = () => {
-    if (data.length < 10) return;
+    if (data.length < moviesPerPage) return;
     setPage((prevState) => prevState + 1);
   };
 
