@@ -1,0 +1,168 @@
+/* Whole section container */
+.movieList__container {
+  width: 55vw;
+  border-radius: 0.5rem;
+  background-color: rgb(248, 248, 248);
+  grid-column: 1/2;
+  grid-row: 2/3;
+  justify-self: center;
+  margin-top: 6rem;
+}
+
+/* Header container */
+.movieList__header {
+  background-color: black;
+  height: max-content;
+  min-height: 12rem;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(3, auto);
+  align-items: center;
+  padding: 2rem 2rem;
+  margin-bottom: 2rem;
+}
+
+.movieList__h2 {
+  text-align: center;
+  font-size: 3rem;
+  height: 8rem;
+  color: rgb(243, 243, 243);
+  text-transform: uppercase;
+}
+
+.movieList__filterBtn {
+  width: 6rem;
+  height: 3rem;
+  background-color: white;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: 300ms;
+}
+.movieList__filterBtn:hover {
+  background-color: rgb(241, 241, 241);
+}
+
+.movieList__movie {
+  border: 1px solid rgb(185, 185, 185);
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  box-shadow: 0px 1px 8px rgba(177, 177, 177, 0.473);
+  background-color: rgb(255, 255, 255);
+}
+
+.movieList__movie a {
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0rem 2rem;
+  height: 10rem;
+}
+
+.movieList__movie:hover {
+  background-color: rgb(238, 238, 238);
+  transform: scale(1.01);
+}
+
+.movie__title_img__container {
+  height: 100%;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  display: flex;
+  align-items: center;
+  flex: 1.5;
+  justify-content: flex-start;
+}
+
+.minImg {
+  width: 60px;
+  height: 80px;
+  margin-right: 1rem;
+}
+
+/* Header element */
+.movieList__filterBtn {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  justify-self: end;
+  min-width: max-content;
+  width: 12rem;
+  height: 3rem;
+}
+
+/* General class for two elements */
+.flexClass {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0rem 2rem;
+}
+
+/* Legenda */
+.movieList__headerList {
+  margin-bottom: 0rem;
+  font-size: 1.4rem;
+  height: 4rem;
+  text-transform: uppercase;
+  margin: 0rem 2rem;
+}
+
+.movieList__movieList {
+  margin: 0rem 2rem;
+  min-height: 40rem;
+}
+
+.movieList__headerList li:first-child {
+  text-align: left;
+  flex: 1.5;
+}
+
+.movieList__headerList li:not(:first-child),
+.movieList__movie_date,
+.movieList__movie_genre,
+.movieList__movie_rating {
+  flex: 1;
+  text-align: center;
+}
+
+.movieList__movie_h3,
+.movieList__movie_rating {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.movieList__movie_date,
+.movieList__movie_genre {
+  font-size: 1.6rem;
+}
+
+.movieList__movie_date {
+  color: rgb(65, 65, 65);
+}
+
+.paginationContainer {
+  width: 95%;
+  margin: 0 2rem;
+  padding: 2rem 5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.paginationBtn {
+  color: #000000;
+  border: 2px solid #ffda00;
+  padding: 1rem 2.5rem;
+  height: 4rem;
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background-color: #ffda00;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.paginationBtn:hover {
+  transform: scale(1.02);
+}

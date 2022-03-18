@@ -1,0 +1,156 @@
+.movieDetail__container {
+  width: 55vw;
+  min-height: 45rem;
+  border-radius: 1rem;
+  grid-column: 1/2;
+  grid-row: 2/3;
+  justify-self: center;
+  align-self: center;
+  box-shadow: 0px 20px 30px 3px rgba(0, 0, 0, 0.55);
+  background: black;
+}
+
+/* ========= */
+
+.movieDetail__left {
+  width: 40%;
+  min-height: 45rem;
+  float: left;
+  background-color: rgb(231, 211, 27);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  position: relative;
+}
+.leftside__img {
+  width: 60%;
+  max-height: 400px;
+  max-width: 300px;
+}
+
+.movieDetail__right {
+  float: left;
+  width: 60%;
+  min-height: 45rem;
+  height: max-content;
+  background: black;
+  padding: 0rem 4rem;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.movieDetail__h1 {
+  color: white;
+  font-weight: 400;
+  text-align: left;
+  font-size: 4rem;
+  margin: 3rem 0 0 0;
+  letter-spacing: 1px;
+}
+
+.movie_releaseDate {
+  margin: 1rem 0 2rem 0;
+  display: block;
+  color: #e3e3e3;
+  font-size: 1.4rem;
+}
+
+.details__list {
+  margin: 1rem 0 2rem 0;
+}
+
+.details__listEl {
+  display: inline;
+  color: #e3e3e3;
+  font-size: 1.4rem;
+  border: 1px solid white;
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.plotContainer p {
+  color: white;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  margin: 1rem 0 2rem 0;
+  line-height: 2rem;
+}
+
+.reviewContainer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  height: 10rem;
+  align-items: center;
+}
+
+.reviewBtn {
+  color: #ffda00;
+  border: 2px solid #ffda00;
+  padding: 1rem 2.5rem;
+  height: 4rem;
+  font-size: 1.5rem;
+  background-color: black;
+  border-radius: 0.5rem;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+.reviewBtn:hover {
+  color: black;
+  background-color: #ffda00;
+}
+
+.ratingsWrapper {
+  display: flex;
+  flex: 2;
+  justify-content: space-around;
+}
+
+.userRating_wrapper,
+.movieRating_wrapper {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userRating_wrapper h2,
+.movieRating_wrapper h2 {
+  text-align: center;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.userRating_wrapper span,
+.movieRating_wrapper span {
+  display: block;
+  font-size: 4rem;
+}
+
+.spinnerWrapper {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+}
+
+.loadingSpinner {
+  width: 24px;
+  height: 24px;
+  animation: loading 1s infinite linear;
+  margin-right: 1rem;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

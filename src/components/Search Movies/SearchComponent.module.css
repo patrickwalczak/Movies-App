@@ -1,0 +1,193 @@
+.searchContainer {
+  grid-row: 1/2;
+  grid-column: 2/3;
+  justify-self: end;
+  position: relative;
+  width: 30vw;
+  height: max-content;
+}
+
+.inputSearchContainer {
+  flex: 1;
+  height: 4rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 0.5rem;
+  border-radius: 1rem;
+  background-color: white;
+  border: 1px solid rgb(201, 201, 201);
+}
+
+.searchImg {
+  width: 14px;
+  height: 14px;
+  margin-right: 1rem;
+  margin-left: 0.5rem;
+}
+
+.searchInput {
+  display: block;
+  width: 90%;
+  height: 100%;
+  padding-left: 1rem;
+  outline: none;
+  border: none;
+  font-size: 1.5rem;
+  border-left: 1px solid rgb(214, 214, 214);
+}
+
+.clearInputBtn {
+  width: max-content;
+  height: max-content;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  font-weight: 500;
+  color: black;
+  margin-right: 2rem;
+  font-size: 2rem;
+}
+
+.loadingSpinner {
+  width: 12px;
+  height: 12px;
+  animation: loading 1s infinite linear;
+  margin-right: 1rem;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.foundMoviesContainer {
+  width: 100%;
+  height: auto;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  bottom: -39rem;
+  right: 0;
+}
+
+.foundMoviesHeader {
+  width: 100%;
+  background-color: rgb(236, 236, 236);
+  font-size: 1.4rem;
+  padding: 1rem;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.resultsAmount {
+  margin-left: 0.5rem;
+  font-weight: 600;
+}
+
+.search__list {
+  width: 100%;
+  height: 36rem;
+  max-height: 36rem;
+  overflow-y: auto;
+  z-index: 100;
+}
+
+.search__list::-webkit-scrollbar {
+  width: 1rem;
+}
+
+.search__list::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.search__list::-webkit-scrollbar-thumb {
+  background-color: rgb(122, 122, 122);
+  border-radius: 1rem;
+}
+
+.foundMovie {
+  width: 100%;
+  height: 6rem;
+}
+
+.foundMovie a {
+  width: 100%;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  background-color: rgb(250, 250, 250);
+  border-bottom: 1px solid rgb(231, 231, 231);
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  color: black;
+}
+
+.foundMovie:hover {
+  cursor: pointer;
+  background-color: rgb(245, 244, 244);
+}
+
+.search__imgContainer {
+  width: 100%;
+  height: 100%;
+  flex: 1.5;
+  position: relative;
+}
+
+.search__movieImg {
+  position: absolute;
+  top: 45%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 35px;
+  flex: 2;
+}
+
+.search__movieDetail {
+  text-transform: uppercase;
+  flex: 8;
+}
+
+.foundTitle {
+  font-weight: 600;
+  font-size: 1.4rem;
+  margin-bottom: 0.2rem;
+}
+
+.foundYear {
+  display: block;
+  font-size: 1.2rem;
+  color: gray;
+}
+
+.errorMessage {
+  height: 10rem;
+  margin: auto;
+  color: black;
+  padding-top: 3rem;
+  padding-left: 7rem;
+}
+
+.foundNoElConta {
+  position: absolute;
+  width: 100%;
+  height: 10rem;
+  background-color: rgb(255, 255, 255);
+  padding-top: 3.5rem;
+  transform: translateY(-0.5rem);
+  border: 1px solid rgb(201, 201, 201);
+}
+
+.foundNoElConta p {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
