@@ -1,6 +1,6 @@
 # Movie App Task
 
-All required functionalities have been built. Application is deployed according to Continuous Deployment approach.
+Application is deployed according to Continuous Deployment approach.
 
 Sometimes API which provides movies data works slowly.
 
